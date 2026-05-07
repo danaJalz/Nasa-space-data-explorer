@@ -1,0 +1,90 @@
+<!-- Dana Alzahrani 2310370 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA Space Data Explorer</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>NASA Space Data Explorer</h1>
+        <p>Explore real NASA data including the Astronomy Picture of the Day.</p>
+    </header>
+
+    <!-- NAVIGATION BAR -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#api">API Search</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT (CENTERED LAYOUT) -->
+    <div class="container">
+
+        <!-- ARTICLE 1 -->
+        <article id="about-article">
+            <h2>About Space Exploration</h2>
+            <p>
+                NASA offers access to a large collection of space images and scientific data.
+                This website lets you explore the Astronomy Picture of the Day (APOD) by choosing a date 
+                or viewing a random APOD to discover new space visuals.
+            </p>
+        </article>
+
+        <!-- ARTICLE 2 (API FORM) -->
+        <article id="api">
+            <h2>Get NASA Data</h2>
+
+            <div class="form-row">
+                <label for="dataType">Data Type:</label>
+                <select id="dataType">
+                    <option value="apod">Astronomy Picture of the Day (APOD)</option>
+                    <option value="random">Random Space Picture</option>
+                </select>
+            </div>
+
+            <div class="form-row" id="dateRow">
+                <label for="dateInput">Choose a Date:</label>
+                <input type="date" id="dateInput">
+            </div>
+
+            <div class="form-row">
+                <button id="getDataBtn">Get Data</button>
+                <button id="clearBtn">Clear</button>
+            </div>
+
+            <div class="form-row">
+                <label>Your Note:</label>
+                <textarea id="userNote" placeholder="Write your thoughts..."></textarea>
+            </div>
+
+            <p id="liveNote" class="note-output"></p>
+        </article>
+
+        <!-- ARTICLE 3 RESULTS -->
+        <article>
+            <h2>Results</h2>
+
+            <!-- FIX: Add heading inside the section to avoid validation warning -->
+            <section id="results">
+                <h3 class="visually-hidden">API Results Section</h3>
+            </section>
+        </article>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Created by Dana Alzahrani — 2310370</p>
+    </footer>
+
+    <script src="JavaScript/script.js"></script>
+</body>
+</html>
